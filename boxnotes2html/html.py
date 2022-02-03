@@ -49,7 +49,6 @@ def convert_simple_element_to_html_tag(box_attribute):
     tag = None
     html_attrib = {}
     attribute_type = box_attribute[0]
-    print('ATTRIBUTE TYPE: ',attribute_type)
     attribute_value = box_attribute[1]
     assert attribute_value  # WIP
     if attribute_type == "bold":
@@ -75,7 +74,7 @@ def convert_simple_element_to_html_tag(box_attribute):
         try:
             html_attrib["size"] = sizemap[size]
         except KeyError:
-            print("Key Error.  Size = ",size)
+            pass
     elif attribute_type == "align":
         tag = "div"
         html_attrib["style"] = "text-align: {}".format(attribute_value)

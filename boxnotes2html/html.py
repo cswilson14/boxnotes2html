@@ -66,14 +66,14 @@ def convert_simple_element_to_html_tag(box_attribute):
     elif "font-size" in attribute_type:
         tag = "font"
         size = attribute_type.split("-")[-1]
-        sizemap = {
-            "medium": "3",
-            "large": "+2",
-            "verylarge": "+3",
-            "small": "-1",  # TODO: consider
-        }
+        #sizemap = {
+        #    "medium": "3",
+        #    "large": "+2",
+        #    "verylarge": "+3",
+        #    "small": "-1",  # TODO: consider
+        #}
         print('SIZE: ',size)
-        html_attrib["size"] = sizemap[size]
+        html_attrib["size"] = size
     elif attribute_type == "align":
         tag = "div"
         html_attrib["style"] = "text-align: {}".format(attribute_value)

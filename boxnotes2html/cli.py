@@ -53,5 +53,5 @@ def write_file(filepath, filetype):
         out_string = note.as_text()
     output_path = os.path.splitext(filepath)[0] + ".{}".format(filetype)
     print("writing file {}".format(output_path))
-    with open(output_path, "w") as f:
+    with open(output_path, "w", encoding="utf-8") as f:
         f.write(out_string)
